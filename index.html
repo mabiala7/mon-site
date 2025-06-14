@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-   <nav>
+  <header>
+   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+   <nav class="menu">
      <ul>
        <li><a href="index.html">Accueil🏠</a></li>
        <li><a href="a-propos.html">À propos🪧</a></li>
        <li><a href="contact.html">Contact☎️</a></li>
      </ul>
    </nav>
+  </header> 
     <h1>Bienvenue dans mon site du nom de Mabiala7 😉</h1>
     <p>Voici mon premier site. En gros, dans ce site j'apprends à coder 🦾</p>
 
@@ -24,6 +27,12 @@
     <script>
   function afficherMessage() {
     alert("Bravo! Tu viens de cliquer sur un vrai bouton interactif 😎");
+  }
+</script>
+     <script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
   }
 </script>
 
