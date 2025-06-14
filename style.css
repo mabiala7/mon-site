@@ -19,3 +19,29 @@ img {
   border: 3px solid navy;
   border-radius: 10px;
 }
+nav {
+  background-color: navy;
+  padding: 10px;
+}
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
