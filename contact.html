@@ -3,9 +3,11 @@
   <head>
     <title>Contact - Mabiala7</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- MENU -->
     <header>
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <nav class="menu">
@@ -18,30 +20,28 @@
       </nav>
     </header>
 
+    <!-- TITRE -->
     <h1>Contacte-moi 📩</h1>
 
-    <form class="formulaire-contact" action="https://formspree.io/f/mgvyylwe" method="POST">
+    <!-- FORMULAIRE AVEC FORMSPREE -->
+    <form action="https://formspree.io/f/mgvyylwe" method="POST" class="formulaire-contact">
       <label for="nom">Nom :</label>
-      <input type="text" id="nom" required>
+      <input type="text" id="nom" name="nom" required>
 
       <label for="email">Email :</label>
-      <input type="email" id="email" required>
+      <input type="email" id="email" name="_replyto" required>
 
       <label for="message">Message :</label>
-      <textarea id="message" rows="5" required></textarea>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit">Envoyer</button>
     </form>
 
+    <!-- MENU BURGER JAVASCRIPT -->
     <script>
       function toggleMenu() {
         const menu = document.querySelector('.menu');
         menu.classList.toggle('active');
-      }
-
-      function envoyerMessage(event) {
-        event.preventDefault(); // empêche le rechargement de la page
-        alert("Message envoyé avec succès ! Merci😊");
       }
     </script>
   </body>
