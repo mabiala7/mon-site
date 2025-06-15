@@ -20,7 +20,7 @@
 
     <h1>Contacte-moi 📩</h1>
 
-    <form class="formulaire-contact" onsubmit="envoyerMessage(event)">
+    <form class="formulaire-contact" action="https://formspree.io/f/mgvyylwe" method="POST">
       <label for="nom">Nom :</label>
       <input type="text" id="nom" required>
 
@@ -41,7 +41,7 @@
 
       function envoyerMessage(event) {
         event.preventDefault(); // empêche le rechargement de la page
-        alert("Message envoyé avec succès ! Merci Patron 😊");
+        alert("Message envoyé avec succès ! Merci😊");
       }
     </script>
   </body>
