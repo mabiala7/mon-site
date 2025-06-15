@@ -154,3 +154,32 @@ nav ul li a:hover {
   background-color: dodgerblue;
 }
 
+.formulaire-contact {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulaire-contact input,
+.formulaire-contact textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.formulaire-contact button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: navy;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.formulaire-contact button:hover {
+  background-color: dodgerblue;
+}
