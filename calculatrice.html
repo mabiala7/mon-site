@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculatrice - Mabiala7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Accueil🏠</a></li>
+          <li><a href="a-propos.html">À propos🪧</a></li>
+          <li><a href="contact.html">Contact☎️</a></li>
+          <li><a href="calculatrice.html">Calculatrice🧮</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Calculatrice simple</h1>
+
+    <div class="calculatrice">
+      <input type="text" id="resultat" disabled />
+      <div class="boutons">
+        <button onclick="ajouter('7')">7</button>
+        <button onclick="ajouter('8')">8</button>
+        <button onclick="ajouter('9')">9</button>
+        <button onclick="ajouter('/')">÷</button>
+
+        <button onclick="ajouter('4')">4</button>
+        <button onclick="ajouter('5')">5</button>
+        <button onclick="ajouter('6')">6</button>
+        <button onclick="ajouter('*')">×</button>
+
+        <button onclick="ajouter('1')">1</button>
+        <button onclick="ajouter('2')">2</button>
+        <button onclick="ajouter('3')">3</button>
+        <button onclick="ajouter('-')">−</button>
+
+        <button onclick="ajouter('0')">0</button>
+        <button onclick="ajouter('.')">.</button>
+        <button onclick="calculer()">=</button>
+        <button onclick="ajouter('+')">+</button>
+
+        <button onclick="effacer()" style="grid-column: span 4; background-color: crimson;">C</button>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+      }
+
+      let champ = document.getElementById("resultat");
+
+      function ajouter(valeur) {
+        champ.value += valeur;
+      }
+
+      function calculer() {
+        try {
+          champ.value = eval(champ.value);
+        } catch {
+          champ.value = "Erreur";
+        }
+      }
+
+      function effacer() {
+        champ.value = "";
+      }
+    </script>
+  </body>
+</html>
