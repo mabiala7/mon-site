@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jeu - Devine le nombre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      input, button {
+        padding: 10px;
+        font-size: 16px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎮 Devine un nombre entre 1 et 10</h1>
+    
+    <input type="number" id="choix" placeholder="Tape un nombre">
+    <button onclick="verifier()">Vérifie</button>
+    
+    <p id="message"></p>
+
+    <script>
+      let secret = Math.floor(Math.random() * 10) + 1;
+
+      function verifier() {
+        let entree = document.getElementById("choix").value;
+        entree = Number(entree);
+
+        if (entree === secret) {
+          document.getElementById("message").textContent = "✅ Bravo !";
+        } else {
+          document.getElementById("message").textContent = "❌ Mauvais numéro. Essaie encore.";
+        }
+      }
+    </script>
+  </body>
+</html>
